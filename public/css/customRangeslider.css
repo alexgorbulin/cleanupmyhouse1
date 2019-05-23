@@ -1,0 +1,540 @@
+/* Remove the navbar's default margin-bottom and rounded borders */
+
+
+/*----------------------------------------------------------------*/
+
+
+/*----------------------MY ORDERS PAGE----------------------------*/
+
+
+/*----------------------------------------------------------------*/
+
+.navbar-stick-forewer {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)!important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)!important;
+    background-color: #fff!important;
+    color: black!important;
+}
+
+.navbar-stick-forewer-link {
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    color: black!important;
+}
+
+.login {
+    padding-right: 4rem!important;
+}
+
+.navbar-stick-forewer-link:hover {
+    color: rgba(244, 98, 58, 1)!important;
+}
+
+.my-orders-jumbotrom {
+    margin-top: 6rem;
+}
+
+
+/*----------------------------------------------------------------*/
+
+
+/*------------------END MY ORDERS PAGE----------------------------*/
+
+
+/*----------------------------------------------------------------*/
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+.row.content1 {
+    height: 480px
+}
+
+.top-success {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    left: 0;
+    z-index: 1031;
+}
+
+.logout {
+    color: black!important;
+}
+
+.logout:hover {
+    color: #f4623a!important;
+}
+
+
+/* Override col-xs  */
+
+.col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 1!important;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+
+/* Set black background color, white text and some padding */
+
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.btnTimes {
+    color: rgba(30, 22, 54, 0.6);
+    box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+    min-width: 100px;
+    width: 120px;
+}
+
+.btnTimes:hover {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}
+
+.alert {
+    display: none;
+}
+
+
+/*Extra options buttons*/
+
+.toggle {
+    color: rgba(30, 22, 54, 0.6);
+    box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+    min-width: 150px;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+    border-radius: 14px;
+}
+
+.toggle img {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.toggle:hover {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(30, 22, 54, 0.7) 0px 0px 140px inset;
+}
+
+.toggleClick {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(30, 22, 54, 0.7) 0px 0px 140px inset;
+}
+
+#top_content {
+    background-image: url(../images/cleanRoom.jpg);
+    background-size: cover;
+}
+
+.top_order {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 40px;
+    box-shadow: 0 12px 6px -6px black;
+    border: 8px ridge rgba(110, 65, 19, 0.23);
+}
+
+.times_label {
+    margin-top: 40px;
+}
+
+.book_btn {
+    width: 100%;
+    color: #fff;
+    background-color: rgb(198, 191, 202);
+    border-color: #EDB88C;
+}
+
+.book_btn:hover + #price {
+    color: black;
+    background-color: rgba(244, 147, 66, 0.54);
+}
+
+.book_btn span {
+    color: red;
+}
+
+.book_btn span:hover {
+    color: rebeccapurple;
+}
+
+.book_btn_row {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.right_colum_img {
+    width: 431px;
+    position: relative;
+    left: -199px;
+    z-index: 0;
+}
+
+.rangeslider__handle {
+    z-index: 1;
+}
+
+.btn-group-justified {
+    margin-top: 35px;
+    z-index: 1;
+}
+
+.lable_bdrm {
+    font-size: 20px;
+}
+
+.lable_rstrm {
+    margin-top: 25px;
+    margin-bottom: 22px;
+    font-size: 20px;
+}
+
+.output {
+    display: inline-block;
+    position: absolute;
+    left: 255px;
+    top: -45px;
+    font-size: 20px;
+}
+
+div.btn-group label {
+    display: block;
+    text-align: center;
+}
+
+button.btn-default.btn.active {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}
+
+#extra_options {
+    margin-top: 20px;
+    display: none;
+}
+
+.extra_option {
+    height: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-extra {
+    width: 100px;
+    float: left;
+}
+
+.btn-extra {
+    margin-left: 40px;
+    margin-bottom: 25px;
+    border-color: orange;
+}
+
+.btn-extra:active {
+    border-color: none;
+}
+
+#summary div {
+    text-align: left;
+}
+
+.help_msg {
+    opacity: 1;
+}
+
+#myBTN {
+    padding-top: 20px;
+}
+
+
+/*-------------------EXTRA OPTIONS--------------*/
+
+.no-padding-bottom {
+    padding-bottom: 0!important;
+}
+
+.form-group p {
+    font-weight: 700;
+    text-align: center;
+}
+
+label.btn.active {
+    background-color: #C6BFCA;
+}
+
+#select_room,
+#select_rroom,
+#select_freq {
+    width: 100%;
+    font-size: 20px;
+}
+
+#datepicker {
+    display: inline-block;
+}
+
+.stickyPrice {
+    background-color: rgba(128, 0, 0, 0.8);
+    border-top: 2px solid brown;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+    align-self: flex-end;
+    font-size: 13px;
+    position: sticky!important;
+    bottom: 0;
+}
+
+#addService {
+    display: flex!important;
+    flex-wrap: wrap!important;
+}
+
+.a,
+.b,
+.c {
+    height: 25px!important;
+    padding-left: 5rem;
+}
+
+.inputNoBorder {
+    background: rgba(255, 255, 255, 0);
+}
+
+#sum {
+    height: 45px;
+}
+
+#sum {
+    font-family: "Times New Roman", "Times", serif;
+    font-size: 2rem;
+    width: 70px;
+}
+
+.fa-dollar-sign {
+    font-size: 2rem;
+    margin: auto 0;
+}
+
+.textFinalOrder {
+    display: flex;
+}
+
+.textFinalOrder span {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#detTimes {
+    width: 90px;
+}
+
+.imgFinalOrder {
+    width: 25px;
+    height: 25px;
+}
+
+.or {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/*-------------------WHY US--------------------*/
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+#why_us {
+    margin-top: 30px;
+}
+
+#why_us div img {
+    max-width: 114px;
+}
+
+#why_us div p {
+    font-size: 20px;
+}
+
+
+/*------------BEGINNING PROMOTIONS ANS BLOG----------------*/
+
+#blog {
+    margin-top: 30px;
+}
+
+#blog h4 {
+    margin-bottom: .4rem;
+    color: #f49342;
+}
+
+#blog h3 {
+    margin-top: .4rem;
+    margin-bottom: 0;
+}
+
+.promo_block {
+    margin-top: 4rem;
+    margin-bottom: 0;
+    border-radius: .6rem;
+    background-color: #f4f6f8;
+}
+
+
+/*-------------BEGGINING TEAM---------------------------*/
+
+#team {
+    margin-top: 40px;
+}
+
+
+/*-------------END TEAM---------------------------------*/
+
+
+/*---------------BEGGINING CONTACT US--------------------*/
+
+#contact_us {
+    margin-top: 40px;
+}
+
+
+/*---------------END CONTACT US--------------------*/
+
+.row .no-float {
+    display: table-cell;
+    float: none;
+}
+
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {
+        height: auto;
+    }
+    .top_order {
+        margin-top: -19px;
+        height: 100%;
+    }
+}
+
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+
+
+/*---------------------CUSTOM----------------------*/
+
+@media screen and (max-width:576px) {
+    .slider-xs-alighment {
+        display: block!important;
+    }
+    .lable_bdrm,
+    .lable_rstrm,
+    .rangeslider,
+    .rangeslider--horizontal,
+    span.help_msg {
+        display: inline-table!important;
+        width: 100%!important;
+    }
+    .lable_bdrm,
+    .lable_rstrm {
+        margin-left: 0px!important;
+        margin-right: 0px!important;
+    }
+    /*     overrider how many times on small screen*/
+    header.masthead {
+        padding-top: 1rem;
+    }
+    header.masthead h1 {
+        font-size: 1.4rem;
+        margin-top: 3rem;
+    }
+    .top_order {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        box-shadow: 0 12px 6px -6px black;
+        border: 2px ridge rgba(110, 65, 19, 0.23);
+    }
+    .containerBtnTimes {
+        display: block;
+    }
+    .containBtn {
+        width: 116px;
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+    }
+    .btn-xl {
+        margin-top: 1rem;
+        padding: 1.25rem 4.25rem;
+    }
+    /*     override extra buttons on small screen */
+    .toggle {
+        width: 150px;
+        margin-left: 0px!important;
+        margin-right: 0px!important;
+    }
+    /*     override room, restroom and how many times in final order*/
+    .sm-screen {
+        font-size: 0.7rem!important;
+    }
+    .stickyPrice {
+        border-top: 3px solid brown;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    #sum {
+        height: 25px;
+        font-size: 1.4rem!important;
+    }
+    .fa-dollar-sign {
+        font-size: 1.4rem;
+    }
+    .a {
+        display: block!important;
+        width: 25%!important;
+        padding-left: 1rem;
+    }
+    .b {
+        display: block!important;
+        width: 25%!important;
+        padding-left: 1rem;
+    }
+    .c {
+        display: block!important;
+        width: 50%!important;
+        padding-left: 1rem;
+    }
+}
+
+
+/*
+ input.form-control:focus + span > i {
+     color: red;
+ }*/
