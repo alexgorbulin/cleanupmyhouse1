@@ -16,37 +16,44 @@
                         <?php echo ++$i; ?>
                             <h4 class="card-title"></h4>
                             <div class="bg-light p-2 mb-3 d-flex justify-content-between flex-wrap">
-                                <div class="bg-light p-2 mb-3"><strong> last Name</strong>
-                                    <?php echo $order->lastName; ?>
+                                <div class="userInfo">
+                                    <div class="bg-light p-2 mb-3"><strong> First Name</strong>
+                                        <?php echo $order->firstName; ?>
+                                    </div>
+                                    <div class="bg-light p-2 mb-3"><strong> last Name</strong>
+                                        <?php echo $order->lastName; ?>
+                                    </div>
+                                    <div class="bg-light p-2 mb-3"><strong> Email:</strong>
+                                        <?php echo $order->orderEmail; ?>
+                                    </div>
+                                    <div class="bg-light p-2 mb-3"><strong> Phone:</strong>
+                                        <?php echo $order->phone; ?>
+                                    </div>
+                                    <div class="bg-light p-2 mb-3"><strong> You earned:</strong>
+                                        <?php echo $order->shiny; ?>
+                                    </div>
+                                    <div class="bg-light p-2 mb-3"><strong>Total earned:</strong> $
+                                        <?php foreach($data['shiny'] as $shiny) : ?>
+                                            <?php echo $shiny->totalShiny; ?>
+                                                <?php endforeach; ?>
+                                    </div>
                                 </div>
-                                <div class="bg-light p-2 mb-3"><strong> Date scheduled</strong>
-                                    <?php echo $order->date; ?>
-                                </div>
-                                <div class="bg-light p-2 mb-3"> <strong>Bedroom:</strong>
-                                    <?php echo $order->room; ?>
-                                </div>
-                                <div class="bg-light p-2 mb-3"><strong> Bathroom:</strong>
-                                    <?php echo $order->restroom; ?>
-                                </div>
-                                <div class="bg-light p-2 mb-3"><strong> Email:</strong>
-                                    <?php echo $order->orderEmail; ?>
-                                </div>
-                                <div class="bg-light p-2 mb-3"><strong> Phone:</strong>
-                                    <?php echo $order->phone; ?>
-                                </div>
-                                <div class="bg-light p-2 mb-3"><strong> You earned:</strong>
-                                    <?php echo $order->shiny; ?>
-                                </div>
-                                <div class="bg-light p-2 mb-3"><strong> Price:</strong> $
-                                    <?php echo $order->price; ?>
-                                </div>
-                                <div class="bg-light p-2 mb-3"><strong>Total earned:</strong> $
-                                    <?php foreach($data['shiny'] as $shiny) : ?>
-                                        <?php echo $shiny->totalShiny; ?>
-                                            <?php endforeach; ?>
-                                </div>
-                                <div class="bg-light p-2 mb-3"><strong>Order created at:</strong>
-                                    <?php echo $order->created_at; ?>
+                                <div class="houseInfo">
+                                    <div class="bg-light p-2 mb-3"> <strong>Bedroom:</strong>
+                                        <?php echo $order->room; ?>
+                                    </div>
+                                    <div class="bg-light p-2 mb-3"><strong> Bathroom:</strong>
+                                        <?php echo $order->restroom; ?>
+                                    </div>
+                                    <div class="bg-light p-2 mb-3"><strong> Price:</strong> $
+                                        <?php echo $order->price; ?>
+                                    </div>
+                                    <div class="bg-light p-2 mb-3"><strong> Date scheduled</strong>
+                                        <?php echo $order->date; ?>
+                                    </div>
+                                    <div class="bg-light p-2 mb-3"><strong>Order created at:</strong>
+                                        <?php echo $order->created_at; ?>
+                                    </div>
                                 </div>
                             </div>
                             <?php if(date("Y-m-d")< ($order->date)) : ?> <a class="btn btn-dark" href="<?php echo URLROOT; ?>/orders1/edit/<?php echo $order->orderId; ?>">Edit</a>

@@ -144,7 +144,7 @@
             
           // Redirect to login
           flash('post_message', 'Post Updated');
-          redirect('orders');
+          redirect('orders1');
           } else {
             die('Something went wrong');
           }

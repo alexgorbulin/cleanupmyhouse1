@@ -4,50 +4,49 @@
     <header class="masthead">
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center text-center">
-                <div class="col-lg-10 align-self-end">
+                <div class="col-lg-10 ">
                     <h1 class="text-uppercase text-white font-weight-bold">Estimate cleaning price</h1>
-                    <hr class="divider my-4"> </div>
-                <!--                        Beginnging calculator              -->
-                <div class="col-xs-12 col-sm-12  col-md-10 col-lg-7 text-left  top_order">
-                    <!--     BEGINNING    BEDROOMS  SLIDER-->
-                    <div class="row mb-3 justify-content-center slider-xs-alighment">
-                        <div class="col col-lg-12 col-sm-12 col-xs-12 lable_bdrm mx-3 my-3">How many bedrooms :</div>
-                        <div class=" col col-lg-12 col-sm-12 col-xs-12">
-                            <output class="output" id="output1" style="display: inline-block ">Studio</output>
-                            <input type="range" value="0" step="1" min="0" max="5" cnt="0" id="room"> </div> <span class="help_msg px-5">*please move scroll</span> </div>
-                    <!--               END BEDROOMS SLIDER-->
-                    <!--     BEGINNING    RESTROOMS  SLIDER-->
-                    <div class="row justify-content-center slider-xs-alighment">
-                        <div class="col col-lg-12 col-sm-12 col-xs-12 lable_rstrm mx-3 my-3 ">How many restrooms :</div>
-                        <div class=" col col-lg-12 col-sm-12 col-xs-12">
-                            <output class="output" id="output2" style="display: inline-block">0</output>
-                            <input type="range" value="0" step="1" min="0" max="5" cnt="0" id="restroom"> </div> <span class="help_msg px-5">*please move scroll</span> </div>
-                    <!--               END RESTROOMS SLIDER-->
-                    <!--               BEGIN HOW MANY TIMES -->
-                    <div class="row align-items-center justify-content-center text-center my-2 containerBtnTimes">
-                        <div class="btn-group px-3 containBtn" role="group">
-                            <button type="button" id="freq2" class="btn btn-default btnTimes active" value="10">One time
-                                <br>service </button>
-                            <!--                            <label>OFF 20%</label>-->
+                    <!--                        Beginnging calculator              -->
+                    <div class="col-xs-12 col-sm-12  col-md-10 col-lg-10 my-0 mx-auto text-left  top_order mb-4">
+                        <!--     BEGINNING    BEDROOMS  SLIDER-->
+                        <div class="row mb-3 justify-content-center slider-xs-alighment">
+                            <div class="col col-lg-12 col-sm-12 col-xs-12 lable_bdrm mx-3 my-3">How many bedrooms :</div>
+                            <div class=" col col-lg-12 col-sm-12 col-xs-12">
+                                <output class="output" id="output1" style="display: inline-block ">Studio</output>
+                                <input type="range" value="0" step="1" min="0" max="5" cnt="0" id="room"> </div>
+                            <!--                                <span class="help_msg px-5">*please move scroll</span> --></div>
+                        <!--               END BEDROOMS SLIDER-->
+                        <!--     BEGINNING    RESTROOMS  SLIDER-->
+                        <div class="row justify-content-center slider-xs-alighment">
+                            <div class="col col-lg-12 col-sm-12 col-xs-12 lable_rstrm mx-3 mt-0 ">How many restrooms :</div>
+                            <div class=" col col-lg-12 col-sm-12 col-xs-12">
+                                <output class="output" id="output2" style="display: inline-block;margin-top:-7px;">0</output>
+                                <input type="range" value="0" step="1" min="0" max="5" cnt="0" id="restroom"> </div>
+                            <!--                                 <span class="help_msg px-5">*please move scroll</span> --></div>
+                        <!--               END RESTROOMS SLIDER-->
+                        <!--               BEGIN HOW MANY TIMES -->
+                        <div class="row align-items-center justify-content-center text-center my-2 containerBtnTimes py-4">
+                            <div class="btn-group px-3 containBtn" role="group">
+                                <button type="button" id="freq2" class="btn btn-default btnTimes active" value="10">One time service </button>
+                                <!--                            <label>OFF 20%</label>-->
+                            </div>
+                            <div class="btn-group px-3 containBtn" role="group">
+                                <button type="button" id="freq3" class="btn btn-default btnTimes" value="20">Every 2 weeks </button>
+                                <!--                            <label>OFF 30%</label>-->
+                            </div>
+                            <div class="btn-group px-3 containBtn" role="group">
+                                <button type="button" id="freq4" class="btn btn-default btnTimes" value="30">Every week service</button>
+                                <!--                            <label>OFF 40%</label>-->
+                            </div>
                         </div>
-                        <div class="btn-group px-3 containBtn" role="group">
-                            <button type="button" id="freq3" class="btn btn-default btnTimes" value="20">Every 2
-                                <br>weeks </button>
-                            <!--                            <label>OFF 30%</label>-->
-                        </div>
-                        <div class="btn-group px-3 containBtn" role="group">
-                            <button type="button" id="freq4" class="btn btn-default btnTimes" value="30">Every
-                                <br>week </button>
-                            <!--                            <label>OFF 40%</label>-->
-                        </div>
+                        <!--        </div>-->
+                        <!--               END HOW MANY TIMES -->
                     </div>
-                    <!--        </div>-->
-                    <!--               END HOW MANY TIMES -->
-                </div>
-                <!--                   End calculator                          -->
-                <div class="col-lg-8 align-self-baseline">
-                    <!-- <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>  --><a class="btn btn-primary btn-xl js-scroll-trigger" href="#about" id="mainBTN">Order Now<span id="price"> </span></a>
-                    <!--                    <button type="button" id="mainBTN" class="btn book_btn">BOOK NOW <span id="price"> </span></button>-->
+                    <!--                   End calculator                          -->
+                    <div class="col-lg-12 mt-5">
+                        <!-- <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>  --><a class="btn btn-primary btn-xl js-scroll-trigger" href="#about" id="mainBTN">Order Now<span id="price"> </span></a>
+                        <!--                    <button type="button" id="mainBTN" class="btn book_btn">BOOK NOW <span id="price"> </span></button>-->
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,73 +62,81 @@
                 <div class="form__container col-lg-12 ">
                     <form action="<?php echo URLROOT; ?>/orders1/add" method="post" class="ajax">
                         <!--                   adding extra buttons   -->
-                        <div class="form-row d-flex justify-content-around  mb-5">
-                            <button name="windows" type="button" class="toggle " value="" data-name="windows" data-state="0" data-price="25"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/01s.png" alt="oven cleaning" class="extra_option" /> <span>Windows cleaning + $25</span> </button>
-                            <button name="refregirator" type="button" class="toggle " value="" data-name="refregirator" data-state="0" data-price="20"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/refrigerator.svg" alt="oven cleaning" class="extra_option"><span>Refregirator cleaning + $20</span></button>
-                            <button name="oven" type="button" class="toggle " value="" data-price="25" data-name="oven" data-state="0"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/oven.svg" alt="oven cleaning" class="extra_option"><span>Oven cleaning + $25</span></button>
-                            <button name="moveIn" type="button" class="toggle " value="" data-name="moveIn" data-state="0" data-price="25"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/movein.svg" alt="oven cleaning" class="extra_option"> <span>MoveIn/Out cleanig + $25</span></button>
-                            <button name="heavy" type="button" class="toggle " value="" data-name="heavy" data-state="0" data-price="40"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/loads.svg" alt="heavy conditions" class="extra_option"> <span>Heavy conditions + $40</span></button>
-                            <button name="green" type="button" class="toggle " value="" data-name="green" data-state="0" data-price="40"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/green.svg" alt="oven cleaning" class="extra_option"> <span>Green cleaning + $40</span></button>
-                        </div>
-                        <!--                   end extra buttons-->
-                        <div class="mt-5 ">
-                            <div class="form-row justify-content-between mt-3" id="personal">
-                                <div class="form-group col-md-6 input-group no-ml-sm"> <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                    <input id="firstName" type="text" class="form-control " name="firstName" placeholder="First name" required> </div>
-                                <div class="form-group col-md-6 input-group no-ml-sm"> <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                    <input id="lastName" type="text" class="form-control" name="lastName" placeholder="Last name" required> </div>
-                            </div>
-                            <div class="form-row justify-content-between mb-2">
-                                <div class="form-group col-md-6 input-group"> <span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
-                                    <input id="email" type="email" class="form-control" name="email" placeholder="Email" required> </div>
-                                <div class="form-group col-md-6 input-group"> <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                                    <input id="phone" type="number" class="form-control" name="phone" placeholder="Phone number" required> </div>
-                            </div>
-                            <div class="form-row justify-content-around mb-2">
-                                <div class="form-group col-md-6 input-group"> <span class="input-group-text"><i class="fas fa-home"></i></span>
-                                    <input id="street" type="test" class="form-control" name="street" placeholder="1234 Main St" required> </div>
-                                <div class="form-group col-md-4 input-group"> <span class="input-group-text"><i class="fas fa-city"></i></span>
-                                    <input id="city" type="text" class="form-control" name="city" placeholder="Your city"> </div>
-                                <div class="form-group col-md-2 input-group"> <span class="input-group-text">zip</span>
-                                    <input id="zip" type="number" class="form-control" name="zip" placeholder="code"> </div>
-                            </div>
-                            <div class="form-row justify-content-between ">
-                                <div class='form-group col-sm-6 input-group'> <span class="input-group-text"><i class="fas fa-calendar-day"></i> </span>
-                                    <input type='date' class="form-control" name="date" placeholder="mm/dd/yy" min="" required> </div>
-                                <div class='form-group col-sm-6 input-group'> <span class="input-group-text"><i class="far fa-clock"></i> </span>
-                                    <input type='time' class="form-control" name="time" value="12:00" placeholder="pick a time" required> </div>
-                            </div>
-                            <div class="form-row justify-content-between">
-                                <div class='form-group col-sm-12 justify-content-center input-group'>
-                                    <button type="submit" name="submit" class="btn btn-primary  btn-light btn-xl" id="target">Submit your order</button>
+                        <div class="row justify-content-md-center">
+                            <div class="col-md-12 col-lg-9">
+                                <div class="form-row d-flex justify-content-between  mb-5">
+                                    <button name="windows" type="button" class="toggle " value="" data-name="Windows cleaning" data-state="0" data-price="25"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/01s.png" alt="Windows cleaning" class="extra_option" /> <span>Windows cleaning + $25</span> </button>
+                                    <button name="refregirator" type="button" class="toggle " value="" data-name="Refregirator inside" data-state="0" data-price="20"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/refrigerator.svg" alt="Regregirator cleaning" class="extra_option"><span>Refregirator cleaning + $20</span></button>
+                                    <button name="oven" type="button" class="toggle " value="" data-price="25" data-name="Oven cleaning" data-state="0"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/oven.svg" alt="oven cleaning" class="extra_option"><span>Oven cleaning + $25</span></button>
+                                    <button name="moveIn" type="button" class="toggle " value="" data-name="MoveIn/Out" data-state="0" data-price="25"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/movein.svg" alt="oven cleaning" class="extra_option"> <span>MoveIn/Out cleanig + $25</span></button>
+                                    <!--                                   <button name="heavy" type="button" class="toggle " value="" data-name="Heavy conditions" data-state="0" data-price="40"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/loads.svg" alt="heavy conditions" class="extra_option"> <span>Heavy conditions + $40</span></button>-->
+                                    <button name="green" type="button" class="toggle " value="" data-name="Green cleaning" data-state="0" data-price="40"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/green.svg" alt="oven cleaning" class="extra_option"> <span>Green cleaning + $40</span></button>
+                                </div>
+                                <!--                   end extra buttons-->
+                                <div class="mt-5 ">
+                                    <div class="form-row justify-content-between mt-3" id="personal">
+                                        <div class="form-group col-md-6 input-group no-ml-sm"> <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                            <input id="firstName" type="text" class="form-control " name="firstName" placeholder="First name" required> </div>
+                                        <div class="form-group col-md-6 input-group no-ml-sm"> <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                            <input id="lastName" type="text" class="form-control" name="lastName" placeholder="Last name" required> </div>
+                                    </div>
+                                    <div class="form-row justify-content-between mb-2">
+                                        <div class="form-group col-md-6 input-group"> <span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
+                                            <input id="email" type="email" class="form-control" name="email" placeholder="Email" required> </div>
+                                        <div class="form-group col-md-6 input-group"> <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                            <input id="phone" type="number" class="form-control" name="phone" placeholder="Phone number" required> </div>
+                                    </div>
+                                    <div class="form-row justify-content-around mb-2">
+                                        <div class="form-group col-md-6 input-group"> <span class="input-group-text"><i class="fas fa-home"></i></span>
+                                            <input id="street" type="test" class="form-control" name="street" placeholder="1234 Main St" required> </div>
+                                        <div class="form-group col-md-4 input-group"> <span class="input-group-text"><i class="fas fa-city"></i></span>
+                                            <input id="city" type="text" class="form-control" name="city" placeholder="Your city"> </div>
+                                        <div class="form-group col-md-2 input-group"> <span class="input-group-text">zip</span>
+                                            <input id="zip" type="number" class="form-control" name="zip" placeholder="code"> </div>
+                                    </div>
+                                    <div class="form-row justify-content-between ">
+                                        <div class='form-group col-sm-6 input-group'> <span class="input-group-text"><i class="fas fa-calendar-day"></i> </span>
+                                            <input type='date' class="form-control" name="date" placeholder="mm/dd/yy" min="" required> </div>
+                                        <div class='form-group col-sm-6 input-group'> <span class="input-group-text"><i class="far fa-clock"></i> </span>
+                                            <input type='time' class="form-control" name="time" value="12:00" placeholder="pick a time" required> </div>
+                                    </div>
+                                    <div class="form-row justify-content-between">
+                                        <div class='form-group col-sm-12 justify-content-center input-group'>
+                                            <button type="submit" name="submit" class="btn btn-primary  btn-light btn-xl" id="target">Submit your order</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--                    subtotal-->
-                        <div class="row stickyPrice">
-                            <div class="col-md-9 col-sm-12 col-xs-12">
-                                <div class="row ">
-                                    <div class="col-md-4 col-sm-3 col-xs-3 a">
-                                        <p class=" textFinalOrder"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/bedroom.png" alt="Rooms" class="imgFinalOrder" /> <span> : </span>
-                                            <input name="room" id="detRoom" class="inputNoBorder" readonly /> </p>
+                            <div class="col-md-7 col-lg-3">
+                                <!--                    subtotal-->
+                                <div class="row stickyPrice">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row ">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p class=" textFinalOrder"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/bedroom.png" alt="Rooms" class="imgFinalOrder" /> <span> : </span> <strong>
+                                                    <input name="room" id="detRoom" class="inputNoBorder" readonly /></strong> </p>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p class="textFinalOrder"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/restroom.png" alt="Restroom" class="imgFinalOrder" /> <span> : </span> <strong>  <input name="restroom" id="detRroom" class="inputNoBorder" readonly /></strong> </p>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 c">
+                                                <p><strong>
+                                                    <input name="often" class="inputNoBorder" id="detTimes" value="One time cleaning" /></strong> </p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div id="addService" class=" w-100"> </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-3 col-xs-3 b">
-                                        <p class="textFinalOrder"><img src="<?php echo URLROOT; ?>/public/img/extraButtonIcons/restroom.png" alt="Restroom" class="imgFinalOrder" /> <span> : </span>
-                                            <input name="restroom" id="detRroom" class="inputNoBorder" readonly /> </p>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 position-absolute bottom-0 endPrice">
+                                        <!--                                       <i class="fas fa-dollar-sign "></i>-->
+                                        <input class="inputNoBorder" name="price" id="sum" />
+                                        <p class="text-center " id="total"> </p>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-6 c">
-                                        <p class="">
-                                            <input name="often" class="inputNoBorder" id="detTimes" value="One time cleaning" /> </p>
-                                    </div>
-                                    <div class="col-md-12 d-flex"> <span class="mr-2"> </span> <span id="addService" class=" d-block"> </span> </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3 col-sm-12 col-xs-12 d-flex justify-content-center">
-                                <div class="col-md-12 d-flex justify-content-center"><i class="fas fa-dollar-sign "></i>
-                                    <input class="inputNoBorder" name="price" id="sum" /> </div>
+                                <!--                   end subtotal-->
                             </div>
                         </div>
-                        <!--                   end subtotal-->
                     </form>
                 </div>
                 <!-- End order form  -->

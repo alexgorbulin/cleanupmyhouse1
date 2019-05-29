@@ -17,7 +17,7 @@
                         <a class="nav-link dropdown-toggle navbar-stick-forewer-link login" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <?php echo $_SESSION['user_name'];?>
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="<?php echo URLROOT; ?>/orders/myOrders">My orders</a> <a class="dropdown-item" href="#">Change my order</a> <a class="dropdown-item" href="#">Total Shiny's
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="<?php echo URLROOT; ?>/orders1/myOrders">My orders</a> <a class="dropdown-item" href="#">Change my order</a> <a class="dropdown-item" href="#">Total Shiny's
                            <?php foreach($data['shiny'] as $shiny) : ?>
                             <?php echo $shiny->totalShiny; ?>
                                 <?php endforeach; ?></a> <a class="nav-link logout" href="<?php echo URLROOT; ?>/users/logout"><i class="fas fa-sign-out-alt"></i> Logout</a> </div>

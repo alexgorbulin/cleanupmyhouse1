@@ -1,6 +1,6 @@
 $(function () {
-    var $document = $(document),
-        $inputRange = $('input[type="range"]');
+    var $document = $(document)
+        , $inputRange = $('input[type="range"]');
     var price;
     var btn_fr = 10;
     var tmp;
@@ -9,17 +9,21 @@ $(function () {
     var addService = [];
     var addPriceService = [];
     var gl_room, gl_restroom, gl_price;
+    var arr = {};
     /*************BEGINNING BUTTON GROUPT PROCENTAGE*************/
     $('#select_freq').change(function () {
         val = (document.getElementById('select_freq').value);
         console.log(val);
         if (val == 1) {
             $('#freq1').click();
-        } else if (val == 2) {
+        }
+        else if (val == 2) {
             $('#freq2').click();
-        } else if (val == 3) {
+        }
+        else if (val == 3) {
             $('#freq3').click();
-        } else if (val == 4) {
+        }
+        else if (val == 4) {
             $('#freq4').click();
         };
     });
@@ -28,24 +32,27 @@ $(function () {
         $(".btn-group > button").removeClass("active");
         //   console.log(this);
         $(this).addClass("active");
-        $('#detTimes').val($(this).text().replace(/\s+/, ""));
+        $('#detTimes').val($(this).text());
         btn_fr = $(this).val();
         regPrice = calculate(gl_room, gl_restroom, btn_fr);
         if ((document.getElementById('room').value != 0) || (document.getElementById('restroom').value != 0)) {
             $('#mainBTN span').text(" for $ " + price);
             $('#sum').val(totalExtraPrice + regPrice);
-        } else {
+            $("#total").html(totalExtraPrice + regPrice);
+        }
+        else {
             $('.help_msg').css('color', 'red');
             $('#mainBTN span').text("");
             $('#sum').val("");
+            $("#total").html('');
         };
     });
     /****************END BUTTON GROUPT PROCENTAGE**************/
     /************BEGINNING SLIDERS AND BUTTON PRICE OUTPUT***********/
     function valueOutput(element) {
-        var value = element.value,
-            output = element.parentNode.getElementsByTagName('output')[0],
-            room = document.getElementById('room').value;
+        var value = element.value
+            , output = element.parentNode.getElementsByTagName('output')[0]
+            , room = document.getElementById('room').value;
         var restroom = document.getElementById('restroom').value;
         var $r = $('input[type=range]');
         //Set details values
@@ -58,10 +65,13 @@ $(function () {
         if (value == 0) {
             output.innerHTML = "Studio";
             $('#sum').val(totalExtraPrice + calculate(room, restroom, btn_fr));
-        } else {
+            $('#total').html(totalExtraPrice + calculate(room, restroom, btn_fr));
+        }
+        else {
             output.innerHTML = value;
             $('#mainBTN span').text(" for $ " + calculate(room, restroom, btn_fr));
             $('#sum').val(totalExtraPrice + calculate(room, restroom, btn_fr));
+            $('#total').html(totalExtraPrice + calculate(room, restroom, btn_fr));
         };
         $('#mainBTN span').text(" for $" + calculate(room, restroom, btn_fr));
         //        document.getElementById('price_sum').innerHTML = "$" + calculate(room, restroom, btn_fr);
@@ -74,7 +84,8 @@ $(function () {
             document.getElementById('price_sum').innerHTML = "$" + calculate(val, restroom, btn_fr);
             if (val == 0) {
                 $('#output1').html('Studio');
-            } else {
+            }
+            else {
                 $('#output1').html(val);
             };
         });
@@ -111,8 +122,8 @@ $(function () {
     /*----------------------EXTRA OPTIONS----------------------*/
     /*---------------------------------------------------------*/
     $('.toggle').click(function () {
-        var name;
-        var arr = new Object();
+        let name;
+        let state;
         var arrOfBtn = document.getElementsByClassName('toggle');
         $('#addService ').empty();
         $(this).toggleClass('toggleClick');
@@ -121,31 +132,36 @@ $(function () {
             totalExtraPrice = totalExtraPrice + parseInt(this.getAttribute('data-price'));
             price = price + parseInt(this.getAttribute('data-price'));
             this.setAttribute('data-state', 1);
-            arrOfBtn[name] = 'active';
+            arrOfBtn[state] = 'active';
             arr[name] = 'active';
             this.value = this.getAttribute('data-price');
-            console.log($(this).val());
-        } else {
+            //            console.log($(this).val());
+        }
+        else {
             totalExtraPrice = totalExtraPrice - parseInt(this.getAttribute('data-price'));
             this.setAttribute('data-state', 0);
             this.value = '';
-            arrOfBtn[name] = 'not active';
+            arrOfBtn[state] = 'not active';
             arr[name] = 'not active';
             price = price - parseInt(this.getAttribute('data-price'));
         }
+        console.log(arrOfBtn);
         for (var i = 0; i < arrOfBtn.length; i++) {
-            name = arrOfBtn[i].getAttribute('data-name');
-            arr[name] = arrOfBtn[i].getAttribute('data-state');
-        }
-        for (var i in arr) {
-            if (arr[i] > 0) {
-                $('#addService').append('<span class="mr-1 d-flex sm-screen">' + i + ';' + '</span>');
+            if (arrOfBtn[i].getAttribute('data-state') > 0) {
+                $('#addService').append('<div class="d-flow-root"><p class="mr-1 d-block pull-left">' + arrOfBtn[i].getAttribute('data-name') + '</p>' + ' <p class="pull-right">' + ' $' + arrOfBtn[i].getAttribute('data-price') + '</p></div>');
             }
         }
-        $('.hiddenInput').val(JSON.stringify(arr));
+        //        for (var i in arr) {
+        //            if (arr[i] > 0) {
+        //                console.log(arr);
+        //                $('#addService').append('<span class="mr-1 d-block sm-screen">' + i + ';' + '</span>');
+        //            }
+        //        }
+        //        $('.hiddenInput').val(JSON.stringify(arr));
         $('#sum').val(totalExtraPrice + regPrice);
-        console.log('totalExtraPrice=' + totalExtraPrice);
-        console.log('regPrice=' + regPrice);
+        $('#total').html(totalExtraPrice + regPrice);
+        //        console.log('totalExtraPrice=' + totalExtraPrice);
+        //        console.log('regPrice=' + regPrice);
     });
     /*---------------------------------------------------------*/
     /*-------------------END EXTRA OPTIONS----------------------*/
@@ -158,6 +174,41 @@ $(function () {
     /*---------------------------------------------------------*/
     /*-------------------END TODAYS DATE FOR CALENDAR----------*/
     /*---------------------------------------------------------*/
+    $('form.ajax').submit(function (e) {
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+        var form = $(this)
+            , url = form.attr('action')
+            , type = form.attr('method')
+            , data = {};
+        form.find('[name]').each(function (index, value) {
+            var form = $(this)
+                , name = form.attr('name')
+                , value = form.val();
+            data[name] = value;
+            //alert(value);
+        });
+        //    console.log(data);
+        $.ajax({
+            type: type
+            , url: url
+            , data: data
+            , success: function () {
+                // alert(data); // show response from the php script.
+                $(".ajax")[0].reset();
+                $("#sum").text('');
+                $("#total").html('');
+                $('#addService ').empty(); //clear additional services list
+                $(".toggle").removeClass('toggleClick'); // clear extra buttons
+                $(".alert").fadeIn();
+                $(".alert").delay(1500).fadeOut(2000);
+                totalExtraPrice = 0;
+                regPrice = 0;
+                for (var i = 0; i < $('.toggle').length; i++) {
+                    $('.toggle').attr('data-state', 0);
+                }
+            }
+        }); // data: form.serialize(), // serializes the form's elements.
+    });
 });
 /*-----------------------------------------*/
 /********************CHANGE ROOM FROM ADDITIONAL OPTIONS*******/

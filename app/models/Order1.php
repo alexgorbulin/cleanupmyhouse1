@@ -15,7 +15,9 @@
                          orders.email AS orderEmail
                          FROM orders 
                          INNER JOIN users ON orders.user_id = users.id 
-                         WHERE users.id = $userId;");
+                         WHERE users.id = $userId
+                         ORDER BY orders.created_at DESC;");
+//        created_at
         
         $results = $this->db->resultset();
        

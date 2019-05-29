@@ -120,7 +120,7 @@ h1 {
     color: rgba(30, 22, 54, 0.6);
     box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
     min-width: 150px;
-    width: 300px;
+    width: 150px;
     height: 150px;
     display: flex;
     align-items: center;
@@ -151,7 +151,7 @@ h1 {
 
 .top_order {
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 40px;
+    /*    border-radius: 40px;*/
     box-shadow: 0 12px 6px -6px black;
     border: 8px ridge rgba(110, 65, 19, 0.23);
 }
@@ -296,28 +296,35 @@ label.btn.active {
 }
 
 .stickyPrice {
-    background-color: rgba(128, 0, 0, 0.8);
+    background-color: white;
+    min-height: 20rem;
     border-top: 2px solid brown;
-    border-top-left-radius: 45px;
-    border-top-right-radius: 45px;
     margin-left: 0px!important;
     margin-right: 0px!important;
     align-self: flex-end;
-    font-size: 13px;
+    font-size: 15px;
     position: sticky!important;
+    top: 5rem;
+}
+
+.d-flow-root {
+    display: flow-root;
+    height: 1.65rem;
+}
+
+.bottom-0 {
     bottom: 0;
 }
 
-#addService {
-    display: flex!important;
-    flex-wrap: wrap!important;
+.endPrice {
+    background-color: lightgray;
 }
 
 .a,
 .b,
 .c {
-    height: 25px!important;
-    padding-left: 5rem;
+    height: 30px!important;
+    padding-left: 1rem;
 }
 
 .inputNoBorder {
@@ -329,15 +336,31 @@ label.btn.active {
 }
 
 #sum {
-    font-family: "Times New Roman", "Times", serif;
-    font-size: 2rem;
-    width: 70px;
+    /*    font-family: "Times New Roman", "Times", serif;*/
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    display: contents;
 }
 
+#total::before {
+    content: "Price $";
+}
+
+p#total {
+    margin: 0px !important;
+    padding: 0.55rem;
+    font-family: "Times New Roman", "Times", serif;
+    font-size: 1.2rem;
+}
+
+
+/*
 .fa-dollar-sign {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: auto 0;
 }
+*/
 
 .textFinalOrder {
     display: flex;
@@ -348,8 +371,18 @@ label.btn.active {
     margin-right: 0.5rem;
 }
 
+#detRoom {
+    font-weight: bold;
+}
+
+#detRroom {
+    font-weight: bold;
+}
+
 #detTimes {
-    width: 90px;
+    width: 190px;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .imgFinalOrder {
@@ -496,7 +529,6 @@ h2 {
     }
     /*     override extra buttons on small screen */
     .toggle {
-        width: 150px;
         margin-left: 0px!important;
         margin-right: 0px!important;
     }
@@ -516,21 +548,25 @@ h2 {
     .fa-dollar-sign {
         font-size: 1.4rem;
     }
+    /*
     .a {
         display: block!important;
         width: 25%!important;
         padding-left: 1rem;
     }
+    
     .b {
         display: block!important;
         width: 25%!important;
         padding-left: 1rem;
     }
+    
     .c {
         display: block!important;
         width: 50%!important;
         padding-left: 1rem;
     }
+*/
 }
 
 
